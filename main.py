@@ -77,7 +77,7 @@ def get_weather(province, city):
         print("推送消息失败，请检查省份或城市是否正确")
         os.system("pause")
         sys.exit(1)
-    city_id = 101210403
+    #city_id = 101210403
     # 毫秒级时间戳
     t = (int(round(time() * 1000)))
     headers = {
@@ -98,7 +98,8 @@ def get_weather(province, city):
     temp = weatherinfo["temp"]
     # 最低气温
     tempn = weatherinfo["tempn"]
-    return weather, temp, tempn
+    cityI = weatherinfo["area"]
+    return weather, temp, tempn,area
 
 
 
@@ -340,7 +341,7 @@ accessToken = get_access_token()
 users = config["user"]
 # 传入省份和市获取天气信息
 province, city = config["province"], config["city"]
-weather, max_temperature, min_temperature = get_weather(province, city)
+weather, max_temperature, min_temperature ,cityI= get_weather(province, city)
 #获取天行API
 tianxing_API=config["tianxing_API"]
 #是否开启天气预报API
@@ -371,7 +372,7 @@ lizhi = lizhi()
 lucky_ = lucky()
 # 公众号推送消息
 for user in users:
-    send_message(user, accessToken, city, weather, max_temperature, min_temperature, pipi, lizhi,pop,tips, note_en, note_ch, health_tip, lucky_)
+    send_message(user, accessToken, cityI, weather, max_temperature, min_temperature, pipi, lizhi,pop,tips, note_en, note_ch, health_tip, lucky_)
 import time
 time_duration = 3.5
 time.sleep(time_duration)
