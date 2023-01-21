@@ -10,7 +10,7 @@ import json
 from zhdate import ZhDate
 global false, null, true
 false = null = true = ''
-config = {"app_id": "wxd468184f03bdf097", "app_secret": "0b636b4cd8da13361c6773c4b528b40e", "template_id": "nvrCY8CJze68s4odZJgUH1-vUQAZnBLOi8ENC_fY3Fk", "user": ["oaBUz5yvTObir3yjtNTG1mTnVT7s", "oaBUz51TpieAgjfqGrWtXHsEwjKE"], "province": "\u6d59\u6c5f", "city": "\u5b81\u6ce2", "birthday1": "r1997-04-08", "birthday2": "r1995-06-10", "birthday3": "1997-01-03", "love_date": "2015-12-27", "Whether_Eng": "False", "Whether_caihongpi": false, "Whether_lizhi": false, "Whether_tip": false, "Whether_health": false, "Whether_lucky": false, "tianxing_API": "5cde00e0381ac5b18bda3dab14cd9176", "astro": "\u91d1\u725b\u5ea7"}
+config = {"app_id": "wxd468184f03bdf097", "app_secret": "0b636b4cd8da13361c6773c4b528b40e", "template_id": "nvrCY8CJze68s4odZJgUH1-vUQAZnBLOi8ENC_fY3Fk", "user": ["oaBUz5yvTObir3yjtNTG1mTnVT7s", "oaBUz51TpieAgjfqGrWtXHsEwjKE"], "province": "\u6d59\u6c5f", "city": "\u6c38\u5609", "birthday1": "r1997-04-08", "birthday2": "r1995-06-10", "birthday3": "1997-01-03", "love_date": "2015-12-27", "Whether_Eng": "False", "Whether_caihongpi": false, "Whether_lizhi": false, "Whether_tip": false, "Whether_health": false, "Whether_lucky": false, "tianxing_API": "5cde00e0381ac5b18bda3dab14cd9176", "astro": "\u91d1\u725b\u5ea7"}
 def get_color():
     # 获取随机颜色
     get_colors = lambda n: list(map(lambda i: "#" + "%06x" % random.randint(0, 0xFFFFFF), range(n)))
