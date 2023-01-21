@@ -77,7 +77,7 @@ def get_weather(province, city):
         print("推送消息失败，请检查省份或城市是否正确")
         os.system("pause")
         sys.exit(1)
-    #city_id = 101210403
+    #city_id = 101210708
     # 毫秒级时间戳
     t = (int(round(time() * 1000)))
     headers = {
@@ -98,8 +98,8 @@ def get_weather(province, city):
     temp = weatherinfo["temp"]
     # 最低气温
     tempn = weatherinfo["tempn"]
-    cityI = weatherinfo["area"]
-    return weather, temp, tempn,area
+    cityI = weatherinfo["cityname"]
+    return weather, temp, tempn,cityI
 
 
 
